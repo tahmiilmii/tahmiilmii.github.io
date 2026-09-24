@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dananjaya Tahmi Ilmi - CV</title>
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: var(--white);
+            color: var(--black);
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- SIDEBAR KIRI --- */
+        .sidebar {
+            width: 35%;
+            padding: 4rem 3rem;
+            position: fixed;
+            height: 100vh;
+            border-right: 1px solid var(--black);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header-info h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .header-info .tagline {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .contact-block {
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-block span {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+            font-weight: 700;
+            color: #555;
+        }
+
+        .contact-block a {
+            color: var(--black);
+            text-decoration: none;
+            border-bottom: 1px solid var(--black);
+            transition: all 0.3s ease;
+        }
+
+        .contact-block a:hover {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 15px;
+            border: 1px solid var(--black);
+            color: var(--black);
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .btn:hover {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        /* --- KONTEN KANAN --- */
+        .main-content {
+            width: 65%;
+            margin-left: 35%;
+            padding: 4rem 5rem 4rem 4rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: justify;
+            font-weight: 400;
+            color: #222;
+        }
+
+        .experience-item {
+            margin-bottom: 3rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .job-company {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-top: 3px;
+            color: #555;
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+            color: #555;
+        }
+
+        ul.tasks {
+            list-style-type: none;
+        }
+
+        ul.tasks li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            text-align: justify;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        ul.tasks li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .project-list {
+            margin-top: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .project-list li {
+            margin-bottom: 1.2rem;
+        }
+
+        .project-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Tombol proyek yang dimodifikasi */
+        .project-link {
+            display: table;
+            margin-top: 8px;
+            margin-left: 0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--white);
+            background-color: var(--black);
+            text-decoration: none;
+            padding: 5px 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            border: 1px solid var(--black);
+            padding: 8px 14px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 900px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+                border-right: none;
+                border-bottom: 2px solid var(--black);
+                padding: 3rem 2rem;
+            }
+            .main-content {
+                width: 100%;
+                margin-left: 0;
+                padding: 3rem 2rem;
+            }
+            .experience-header {
+                flex-direction: column;
+            }
+            .job-date {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR KIRI -->
+    <aside class="sidebar">
+        <div class="header-info">
+            <h1>Dananjaya Tahmi Ilmi</h1>
+            <div class="tagline">IT Operations & Data Management</div>
+
+            <div class="contact-block">
+                <span>Location</span>
+                Central Java, Indonesia
+            </div>
+            
+            <div class="contact-block">
+                <span>Phone</span>
+                +62 8157-638-754
+            </div>
+
+            <div class="contact-block">
+                <span>Email</span>
+                <a href="mailto:tahmiilmii@gmail.com">tahmiilmii@gmail.com</a>
+            </div>
+
+            <div class="contact-block">
+                <span>Instagram</span>
+                <a href="https://www.instagram.com/oozrah/" target="_blank">oozrah</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <a href="#" class="btn" style="background: var(--black); color: var(--white);">Download CV (.PDF)</a>
+        </div>
+    </aside>
+
+    <!-- KONTEN KANAN -->
+    <main class="main-content">
+        
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Versatile and highly accurate professional with over 7 years of experience spanning IT infrastructure management, database administration, and operational data processing. Proven track record of managing robust server environments while simultaneously handling high-volume data validation and technical customer support. Combines deep technical expertise (SQL, System Administration) with strong administrative skills (data entry, technical documentation, customer service) to ensure seamless daily operations. Highly adaptable, detail-oriented, and capable of bridging the gap between technical requirements and administrative business workflows.
+            </p>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">IT Infrastructure & Data Administrator</div>
+                        <div class="job-company">BLUD RSUD Batang</div>
+                    </div>
+                    <div class="job-date">Sep 2018 – Present</div>
+                </div>
+                <ul class="tasks">
+                    <li><strong>IT Operations:</strong> Manage and maintain production servers, virtualization environments (VMware), and infrastructure to ensure high availability for critical hospital operations.</li>
+                    <li><strong>Database Management:</strong> Administer Microsoft SQL Server databases, executing routine backups, log management, and system troubleshooting to safeguard data integrity.</li>
+                    <li><strong>Data Processing & Validation:</strong> Process large volumes of operational data, conducting rigorous database-level validation to ensure accuracy for daily reporting and master data templates.</li>
+                    <li><strong>User Support & Administration:</strong> Act as the primary point of contact for internal users, professionally handling inquiries, resolving technical issues, and processing operational requests via ticketing and chat.</li>
+                    <li><strong>Process Improvement:</strong> Develop PowerShell scripts to automate routine system monitoring, significantly reducing manual administrative checks and improving team efficiency.</li>
+                    <li><strong>Technical Documentation:</strong> Prepare and maintain detailed standard operating procedures (SOPs), data logs, and troubleshooting manuals.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Freelance Data & System Analyst</div>
+                        <div class="job-company">Independent IT Projects & Solution Support</div>
+                    </div>
+                    <div class="job-date">2019 – Present</div>
+                </div>
+                <ul class="tasks">
+                    <li><strong>Requirement Analysis:</strong> Gather and analyze user requirements, translating them into functional administrative and technical solutions.</li>
+                    <li><strong>Data Administration:</strong> Conduct research, high-accuracy data collection, and system testing to support various client project objectives.</li>
+                    <li><strong>Client Communication:</strong> Regularly follow up with clients through digital channels to gather feedback, accommodate request modifications, and ensure complete customer satisfaction.</li>
+                    <li><strong>Project Delivery:</strong> Independently manage end-to-end project workflows utilizing the SDLC Waterfall methodology, from initial data gathering and system design documentation to final solution handover.</li>
+                </ul>
+                
+                <p style="margin-top: 2rem; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 800; border-bottom: 1px solid var(--black); padding-bottom: 5px;">Notable Completed Projects</p>
+                <ul class="tasks project-list">
+                    <li>
+                        <span class="project-title">Genkai Cloth Brand Website:</span> Designed, developed, and managed a WordPress-based digital catalog and brand profile, optimizing UI/UX for minimalist aesthetics and product showcases.
+                        <a href="https://genkaicloth.wordpress.com" target="_blank" class="project-link">View Site ↗</a>
+                    </li>
+                    <li>
+                        <span class="project-title">Civil Servant (CPNS/PPPK) Attendance System:</span> Conducted system analysis and requirement gathering for a secure attendance tracking application used during official candidate examinations. 
+                        <a href="#" target="_blank" class="project-link">View Site ↗</a>
+                    </li>
+                    <li>
+                        <span class="project-title">Student Enrollment System:</span> Mapped system requirements and administrative workflows to digitalize the new student registration process for an Islamic boarding school. 
+                        <a href="#" target="_blank" class="project-link">View Site ↗</a>
+                    </li>
+                    <li>
+                        <span class="project-title">Cafe POS & QRIS Integration:</span> Analyzed business needs to design functional requirements for a comprehensive Point of Sale (POS) system featuring QR-based menus and digital payments. 
+                        <a href="#" target="_blank" class="project-link">View Site ↗</a>
+                    </li>
+                    <li>
+                        <span class="project-title">Statistical Data Analysis:</span> Processed, validated, and analyzed quantitative academic research data using IBM SPSS to support university thesis requirements.
+                        <a href="#" target="_blank" class="project-link">View Report ↗</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Competencies & Technical Skills</h2>
+            <div class="skills-list" style="margin-bottom: 2rem;">
+                <span class="skill-tag">Problem Solver</span>
+                <span class="skill-tag">Fast Learner</span>
+                <span class="skill-tag">Independent Worker</span>
+                <span class="skill-tag">High Attention to Detail</span>
+                <span class="skill-tag">Process Improvement Mindset</span>
+                <span class="skill-tag">SDLC Waterfall</span>
+            </div>
+            <ul class="tasks">
+                <li><strong>System Analysis:</strong> SDLC (Waterfall Methodology), Requirement Gathering, Business Workflow Mapping.</li>
+                <li><strong>Databases:</strong> Microsoft SQL Server, MySQL / MariaDB, SSMS, DBeaver.</li>
+                <li><strong>Infrastructure & Web:</strong> Windows Server, Linux, VMware, Apache, PHP, Laravel, WordPress.</li>
+                <li><strong>Office & Admin Tools:</strong> Microsoft Excel (Advanced), Google Sheets, Microsoft Office Suite, Word Processing, SPSS.</li>
+                <li><strong>Remote Work & Networking:</strong> PowerShell, PuTTY, SSH, RDP, Customer Chat Applications.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="experience-item" style="margin-bottom: 0;">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Bachelor of Informatics (S.Kom.)</div>
+                        <div class="job-company">STMIK Widya Pratama Pekalongan</div>
+                    </div>
+                    <div class="job-date">2017 – 2024</div>
+                </div>
+                <p style="font-size: 1rem; margin-top: 0.5rem; text-align: left;">Focus: Mobile & Web Development • GPA: 3.03 / 4.00</p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
