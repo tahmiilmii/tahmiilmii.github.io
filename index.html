@@ -3,631 +3,1522 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dananjaya Tahmi Ilmi - CV</title>
-    <meta name="description" content="IT Infrastructure & Database Operations professional with 4+ years of hands-on experience at a public hospital. VMware, Windows Server, Linux, SQL Server, system analysis.">
+    <meta name="description" content="IT Operations & Technology Professional with 4+ years of hands-on infrastructure and database operations experience, plus hospital application support experience since 2017.">
+    <meta name="theme-color" content="#ffffff">
+    <title>CV - DANANJAYA TAHMI ILMI</title>
     <style>
         :root {
-            --black: #000000;
-            --white: #ffffff;
+            color-scheme: light;
+            --ink: #172a2c;
+            --muted: #526568;
+            --accent: #176b69;
+            --accent-dark: #105452;
+            --line: #d7e2e1;
+            --surface: #ffffff;
+            --background: #f4f7f7;
+            --soft-accent: #e8f2f1;
+            --content-width: 1080px;
         }
 
-        * {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            display: flex;
-            min-height: 100vh;
-            background-color: var(--white);
-            color: var(--black);
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            margin: 0;
+            background: var(--background);
+            color: var(--ink);
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- SIDEBAR KIRI --- */
-        .sidebar {
-            width: 35%;
-            padding: 4rem 3rem;
-            position: fixed;
-            height: 100vh;
-            border-right: 1px solid var(--black);
+        a {
+            color: var(--accent-dark);
+            text-underline-offset: 0.18em;
+        }
+
+        a:hover {
+            color: var(--ink);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #6eb9b5;
+            outline-offset: 3px;
+        }
+
+        .page-shell {
+            width: min(var(--content-width), calc(100% - 40px));
+            margin: 32px auto;
+        }
+
+        .hero,
+        .content-section {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 8px 26px rgb(23 42 44 / 4%);
+        }
+
+        .hero {
+            position: relative;
+            padding: clamp(28px, 5vw, 56px);
+            border-top: 5px solid var(--accent);
+        }
+
+        .hero-topline {
             display: flex;
-            flex-direction: column;
+            align-items: flex-start;
             justify-content: space-between;
+            gap: 24px;
         }
 
-        .header-info h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 0.5rem;
-            line-height: 1.1;
+        .eyebrow {
+            margin: 0 0 10px;
+            color: var(--accent);
+            font-size: 0.76rem;
+            font-weight: 750;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
         }
 
-        .header-info .tagline {
-            font-size: 0.753rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 3rem;
-            font-weight: 600;
-        }
-
-        .contact-block {
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .contact-block span {
-            display: block;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 4px;
-            font-weight: 700;
-            color: #555;
-        }
-
-        .contact-block a {
-            color: var(--black);
-            text-decoration: none;
-            border-bottom: 1px solid var(--black);
-            transition: all 0.3s ease;
-        }
-
-        .contact-block a:hover {
-            background-color: var(--black);
-            color: var(--white);
-        }
-
-        /* --- KONTEN KANAN --- */
-        .main-content {
-            width: 65%;
-            margin-left: 35%;
-            padding: 4rem 5rem 4rem 4rem;
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--black);
-            padding-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
+        h1,
+        h2,
+        h3,
         p {
-            font-size: 1rem;
-            line-height: 1.8;
-            text-align: justify;
-            font-weight: 400;
-            color: #222;
+            margin-top: 0;
+        }
+
+        h1 {
+            max-width: 740px;
+            margin-bottom: 8px;
+            font-size: clamp(2.1rem, 5vw, 3.55rem);
+            letter-spacing: -0.045em;
+            line-height: 1.08;
+        }
+
+        .headline {
+            margin: 0;
+            color: var(--ink);
+            font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+            font-weight: 700;
+        }
+
+        .specialties {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        .language-switch {
+            display: inline-flex;
+            flex: 0 0 auto;
+            gap: 3px;
+            padding: 4px;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            background: #f7f9f9;
+        }
+
+        .language-switch button {
+            min-width: 48px;
+            padding: 7px 12px;
+            border: 0;
+            border-radius: 6px;
+            background: transparent;
+            color: var(--muted);
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 750;
+            cursor: pointer;
+        }
+
+        .language-switch button[aria-pressed="true"] {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            margin: 30px 0 0;
+            padding: 18px 0 0;
+            border-top: 1px solid var(--line);
+            list-style: none;
+        }
+
+        .contact-list li,
+        .contact-list address {
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-style: normal;
+        }
+
+        .contact-label {
+            margin-right: 6px;
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        .availability {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 5px 11px;
+            border: 1px solid #b7d8d5;
+            border-radius: 999px;
+            background: var(--soft-accent);
+            color: var(--accent-dark);
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        main {
+            display: grid;
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .content-section {
+            padding: clamp(24px, 4vw, 38px);
+            scroll-margin-top: 20px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 22px;
+            padding-bottom: 11px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: 1.15rem;
+            letter-spacing: 0.075em;
+            line-height: 1.35;
+            text-transform: uppercase;
+        }
+
+        .summary-copy {
+            max-width: 900px;
+            margin: 0;
+            color: #304447;
+            font-size: 1.02rem;
+        }
+
+        .competency-grid,
+        .project-grid,
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .competency-card,
+        .project-card,
+        .skill-card {
+            min-width: 0;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fbfcfc;
+        }
+
+        .competency-card h3,
+        .project-card h3,
+        .skill-card h3 {
+            margin-bottom: 8px;
+            color: var(--accent-dark);
+            font-size: 0.98rem;
+            line-height: 1.4;
+        }
+
+        .competency-card p,
+        .project-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .experience-list {
+            display: grid;
+            gap: 27px;
         }
 
         .experience-item {
-            margin-bottom: 3rem;
+            padding-left: 19px;
+            border-left: 2px solid #b6d5d3;
         }
 
         .experience-header {
             display: flex;
+            align-items: flex-start;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1rem;
+            gap: 18px;
+            margin-bottom: 11px;
         }
 
-        .job-title {
-            font-size: 1.2rem;
-            font-weight: 700;
+        .experience-header h3 {
+            margin: 0;
+            font-size: 1.08rem;
+            line-height: 1.45;
         }
 
-        .job-company {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            margin-top: 3px;
-            color: #555;
-        }
-
-        .job-date {
-            font-size: 0.85rem;
-            font-variant-numeric: tabular-nums;
+        .company {
+            margin: 3px 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
             font-weight: 600;
-            color: #555;
+        }
+
+        .date {
+            flex: 0 0 auto;
+            color: var(--accent-dark);
+            font-size: 0.86rem;
+            font-weight: 750;
             white-space: nowrap;
         }
 
-        ul.tasks {
-            list-style-type: none;
+        .detail-list {
+            display: grid;
+            gap: 7px;
+            margin: 0;
+            padding-left: 20px;
+            color: #304447;
         }
 
-        ul.tasks li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.8rem;
-            font-size: 0.95rem;
-            text-align: justify;
-            line-height: 1.7;
-            color: #222;
+        .detail-list li {
+            padding-left: 3px;
         }
 
-        ul.tasks li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            font-weight: bold;
+        .detail-list li::marker {
+            color: var(--accent);
         }
 
-        .sub-heading {
-            margin-top: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .project-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .project-card h3 {
+            margin-bottom: 7px;
+        }
+
+        .project-card .project-meta {
+            margin: -2px 0 8px;
+            color: var(--muted);
             font-size: 0.8rem;
-            font-weight: 800;
-            border-bottom: 1px solid var(--black);
-            padding-bottom: 5px;
-        }
-
-        .project-list {
-            margin-top: 1.5rem;
-            padding-left: 1.5rem;
-        }
-
-        .project-list li {
-            margin-bottom: 1.2rem;
-        }
-
-        .project-title {
             font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
         }
 
-        .project-link {
-            display: table;
-            margin-top: 8px;
-            margin-left: 0;
-            font-size: 0.75rem;
+        .project-card a {
+            display: inline-block;
+            margin-left: 0.45rem;
+            padding: 0.12rem 0.5rem;
+            border: 1px solid var(--line);
+            border-radius: 5px;
+            background: var(--surface);
+            font-size: 0.8rem;
             font-weight: 700;
-            color: var(--white);
-            background-color: var(--black);
+            line-height: 1.35;
             text-decoration: none;
-            padding: 5px 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
+            vertical-align: baseline;
+            white-space: nowrap;
         }
 
-        .language-welcome {
-            position: fixed;
-            inset: 0;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            background: var(--white);
+        .project-card p {
+            align-self: stretch;
         }
 
-        .language-welcome[hidden] {
-            display: none;
-        }
-
-        .welcome-content {
-            width: min(100%, 560px);
-            text-align: center;
-        }
-
-        .welcome-content h1 {
-            font-size: clamp(2rem, 7vw, 4rem);
-            line-height: 1;
-            letter-spacing: -2px;
+        .subsection-heading {
+            margin: 27px 0 17px;
+            color: var(--accent-dark);
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
         }
 
-        .welcome-content p {
-            margin: 1rem 0 2.5rem;
-            text-align: center;
-            color: #555;
+        .skill-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .language-options {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
+        .skill-card {
+            padding: 16px 18px;
         }
 
-        .language-options button,
-        .language-switch {
-            border: 1px solid var(--black);
-            background: var(--white);
-            color: var(--black);
-            font: inherit;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
+        .skill-card p {
+            margin: 0;
+            color: #394e50;
+            font-size: 0.91rem;
         }
 
-        .language-options button {
-            min-width: 150px;
-            padding: 1rem 1.5rem;
+        .training-list {
+            display: grid;
+            gap: 14px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
 
-        .language-options button:hover,
-        .language-options button:focus-visible,
-        .language-switch:hover,
-        .language-switch:focus-visible {
-            background: var(--black);
-            color: var(--white);
+        .training-list li {
+            padding-left: 16px;
+            border-left: 2px solid #b6d5d3;
         }
 
-        .language-switch {
-            padding: 0.4rem 0.65rem;
-            font-size: 0.7rem;
+        .training-list strong {
+            display: block;
         }
 
-        /* --- RESPONSIVE MOBILE --- */
-        @media (max-width: 900px) {
-            body {
-                flex-direction: column;
+        .training-list span {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 760px) {
+            .page-shell {
+                width: min(100% - 24px, var(--content-width));
+                margin: 12px auto;
             }
-            .sidebar {
-                width: 100%;
-                position: relative;
-                height: auto;
-                border-right: none;
-                border-bottom: 2px solid var(--black);
-                padding: 3rem 2rem;
+
+            .competency-grid {
+                grid-template-columns: 1fr;
             }
-            .main-content {
-                width: 100%;
-                margin-left: 0;
-                padding: 3rem 2rem;
+
+            .hero-topline {
+                gap: 14px;
             }
+
+            .contact-list {
+                gap: 8px 18px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .hero-topline,
             .experience-header {
                 flex-direction: column;
             }
-            .job-date {
-                margin-top: 0.5rem;
+
+            .language-switch {
+                order: -1;
+                align-self: flex-end;
+            }
+
+            .date {
+                white-space: normal;
+            }
+
+            .project-grid,
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-list {
+                display: grid;
+                gap: 8px;
             }
         }
 
-        @media (max-width: 420px) {
-            .language-options {
+        @media screen and (max-width: 999px) {
+            :root {
+                --ink: #000;
+                --muted: #555;
+                --accent: #000;
+                --accent-dark: #000;
+                --line: #ddd;
+                --background: #fff;
+                --soft-accent: #f5f5f5;
+            }
+
+            .page-shell {
+                width: min(100% - 24px, 760px);
+                margin: 16px auto;
+            }
+
+            .hero,
+            .content-section {
+                border: 1px solid #e5e5e5;
+                border-radius: 6px;
+                background: #fff;
+                box-shadow: none;
+            }
+
+            .hero {
+                padding: clamp(18px, 4vw, 32px);
+                border-top: 1px solid #e5e5e5;
+            }
+
+            .hero-topline {
+                gap: 14px;
+            }
+
+            h1 {
+                margin-bottom: 0.5rem;
+                font-size: clamp(1.8rem, 8vw, 2.4rem);
+                letter-spacing: -0.04em;
+                line-height: 1.08;
+                text-transform: uppercase;
+            }
+
+            .headline {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .specialties {
+                margin-top: 0.7rem;
+                font-size: 0.78rem;
+                letter-spacing: 0.06em;
+                line-height: 1.7;
+                text-transform: uppercase;
+            }
+
+            .language-switch {
+                background: #fff;
+            }
+
+            .language-switch button[aria-pressed="true"] {
+                background: #000;
+            }
+
+            .contact-list {
+                gap: 0.75rem 1rem;
+                margin-top: 1.25rem;
+                padding-top: 1rem;
+            }
+
+            .contact-list li,
+            .contact-list address {
+                font-size: 0.86rem;
+            }
+
+            .contact-label {
+                display: block;
+                margin: 0 0 2px;
+                color: var(--muted);
+                font-size: 0.68rem;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+            }
+
+            .contact-list a,
+            .contact-list address {
+                color: var(--ink);
+                text-decoration: none;
+                overflow-wrap: anywhere;
+            }
+
+            .contact-list a {
+                border-bottom: 1px solid var(--ink);
+            }
+
+            .availability {
+                margin-top: 1rem;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+                color: var(--ink);
+                font-size: 0.76rem;
+                letter-spacing: 0.05em;
+                line-height: 1.5;
+                text-transform: uppercase;
+            }
+
+            main {
+                gap: 12px;
+                margin-top: 12px;
+            }
+
+            .content-section {
+                padding: clamp(18px, 3vw, 24px);
+                scroll-margin-top: 16px;
+            }
+
+            .section-heading {
+                display: block;
+                margin-bottom: 1rem;
+                padding: 0 0 0.45rem;
+                border-bottom: 2px solid var(--ink);
+            }
+
+            .section-heading h2 {
+                font-size: 1rem;
+                letter-spacing: 0.08em;
+            }
+
+            .summary-copy {
+                max-width: none;
+                color: #333;
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+            .competency-grid,
+            .project-grid,
+            .skill-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .competency-card,
+            .project-card,
+            .skill-card {
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+            }
+
+            .competency-card h3,
+            .project-card h3,
+            .skill-card h3 {
+                margin-bottom: 0.35rem;
+                color: var(--ink);
+                font-size: 1rem;
+            }
+
+            .competency-card p,
+            .project-card p {
+                color: #333;
+                font-size: 0.92rem;
+                line-height: 1.65;
+            }
+
+            .experience-list {
+                gap: 1.5rem;
+            }
+
+            .experience-item {
+                padding-left: 0;
+                border: 0;
+            }
+
+            .experience-header {
+                gap: 12px;
+                margin-bottom: 0.55rem;
+            }
+
+            .experience-header h3 {
+                font-size: 1rem;
+            }
+
+            .company {
+                font-size: 0.82rem;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+
+            .date {
+                color: var(--muted);
+                font-size: 0.8rem;
+            }
+
+            .detail-list {
+                display: block;
+                padding: 0;
+                color: #222;
+                list-style: none;
+            }
+
+            .detail-list li {
+                position: relative;
+                margin-bottom: 0.5rem;
+                padding: 0 0 0 1.25rem;
+                font-size: 0.92rem;
+                line-height: 1.65;
+                text-align: left;
+            }
+
+            .detail-list li::before {
+                position: absolute;
+                left: 0;
+                color: var(--ink);
+                content: "—";
+                font-weight: 700;
+            }
+
+            .detail-list li::marker {
+                content: "";
+            }
+
+            .project-card .project-meta {
+                color: var(--muted);
+            }
+
+            .project-card a {
+                color: var(--ink);
+            }
+
+            .subsection-heading {
+                margin: 22px 0 12px;
+                color: var(--ink);
+            }
+
+            .skill-card p {
+                color: #333;
+                overflow-wrap: anywhere;
+                font-size: 0.92rem;
+                line-height: 1.65;
+            }
+
+            .training-list {
+                gap: 0.75rem;
+            }
+
+            .training-list li {
+                padding-left: 0;
+                border: 0;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            :root {
+                --ink: #000;
+                --muted: #555;
+                --accent: #000;
+                --accent-dark: #000;
+                --line: #ddd;
+                --background: #fff;
+                --soft-accent: #f5f5f5;
+            }
+
+            .page-shell {
+                display: block;
+                width: 100%;
+                margin: 0;
+            }
+
+            .hero {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 35%;
+                height: 100vh;
+                overflow-y: auto;
+                display: flex;
                 flex-direction: column;
+                justify-content: space-between;
+                padding: 4rem 3rem;
+                border: 0;
+                border-right: 1px solid var(--ink);
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .hero-topline {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .language-switch {
+                align-self: flex-start;
+                order: 2;
+                margin-top: 1.5rem;
+                background: var(--surface);
+            }
+
+            h1 {
+                max-width: 100%;
+                margin-bottom: 0.5rem;
+                font-size: clamp(2rem, 3vw, 2.7rem);
+                letter-spacing: -0.04em;
+                text-transform: uppercase;
+            }
+
+            .headline {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .specialties {
+                margin-top: 0.7rem;
+                font-size: 0.78rem;
+                letter-spacing: 0.08em;
+                line-height: 1.7;
+                text-transform: uppercase;
+            }
+
+            .contact-list {
+                display: block;
+                margin: 1.8rem 0 0;
+                padding: 0;
+                border: 0;
+            }
+
+            .contact-list li {
+                margin-bottom: 1.25rem;
+                font-size: 0.92rem;
+            }
+
+            .contact-label {
+                display: block;
+                margin: 0 0 4px;
+                color: var(--muted);
+                font-size: 0.7rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+            }
+
+            .contact-list a,
+            .contact-list address {
+                color: var(--ink);
+                text-decoration: none;
+                overflow-wrap: anywhere;
+            }
+
+            .contact-list a {
+                border-bottom: 1px solid var(--ink);
+            }
+
+            .contact-list a:hover {
+                background: var(--ink);
+                color: var(--surface);
+            }
+
+            .availability {
+                align-self: flex-start;
+                margin-top: 1.5rem;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+                color: var(--ink);
+                font-size: 0.78rem;
+                letter-spacing: 0.07em;
+                line-height: 1.6;
+                text-transform: uppercase;
+            }
+
+            main {
+                display: block;
+                width: 65%;
+                margin: 0 0 0 35%;
+                padding: 4rem 3rem 4rem 2.5rem;
+            }
+
+            .content-section {
+                margin-bottom: 1.5rem;
+                padding: 1.3rem 1.5rem;
+                border: 1px solid #e5e5e5;
+                border-radius: 6px;
+                background: #fff;
+                box-shadow: none;
+                scroll-margin-top: 24px;
+            }
+
+            .section-heading {
+                display: block;
+                margin-bottom: 1.1rem;
+                padding: 0 0 0.5rem;
+                border-bottom: 2px solid var(--ink);
+            }
+
+            .section-heading h2 {
+                font-size: 1.15rem;
+                letter-spacing: 0.09em;
+            }
+
+            .summary-copy {
+                max-width: none;
+                font-size: 1rem;
+                line-height: 1.8;
+                text-align: justify;
+            }
+
+            .competency-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .competency-card,
+            .project-card,
+            .skill-card {
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+            }
+
+            .competency-card h3,
+            .project-card h3,
+            .skill-card h3 {
+                margin-bottom: 0.35rem;
+                color: var(--ink);
+                font-size: 1rem;
+            }
+
+            .competency-card p,
+            .project-card p {
+                color: #304447;
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+            .experience-list {
+                gap: 2rem;
+            }
+
+            .experience-item {
+                padding-left: 0;
+                border: 0;
+            }
+
+            .experience-header {
+                align-items: baseline;
+                margin-bottom: 0.7rem;
+            }
+
+            .experience-header h3 {
+                font-size: 1.1rem;
+            }
+
+            .company {
+                font-size: 0.85rem;
+                letter-spacing: 0.07em;
+                text-transform: uppercase;
+            }
+
+            .date {
+                color: var(--muted);
+                font-size: 0.85rem;
+            }
+
+            .detail-list {
+                display: block;
+                padding: 0;
+                color: #222;
+                list-style: none;
+            }
+
+            .detail-list li {
+                position: relative;
+                margin-bottom: 0.55rem;
+                padding: 0 0 0 1.5rem;
+                font-size: 0.95rem;
+                line-height: 1.7;
+                text-align: justify;
+            }
+
+            .detail-list li::before {
+                position: absolute;
+                left: 0;
+                color: var(--ink);
+                content: "—";
+                font-weight: 700;
+            }
+
+            .detail-list li::marker {
+                content: "";
+            }
+
+            .detail-list.toggle-list.collapsed .extra {
+                display: none;
+            }
+
+            .toggle-row {
+                margin: 0;
+                padding: 0 0 0 1.5rem;
+                list-style: none;
+            }
+
+            .more-btn {
+                color: var(--ink);
+            }
+
+            .project-grid,
+            .skill-grid {
+                grid-template-columns: 1fr;
+                gap: 1.1rem;
+            }
+
+            .subsection-heading {
+                margin: 22px 0 14px;
+            }
+
+            .project-card.featured {
+                grid-column: auto;
+                padding: 1.2rem 1.4rem;
+                border: 1px solid var(--line);
+                border-left: 3px solid var(--ink);
+                border-radius: 0;
+                background: #f7f7f7;
+            }
+
+            .project-card .project-meta {
+                color: var(--muted);
+            }
+
+            .project-card a {
+                color: var(--ink);
+            }
+
+            .skill-card p {
+                color: #222;
+                overflow-wrap: anywhere;
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+            .training-list {
+                gap: 0.8rem;
+            }
+
+            .training-list li {
+                padding-left: 0;
+                border: 0;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        @media print {
+            :root {
+                --background: #fff;
+                --surface: #fff;
+            }
+
+            body {
+                font-size: 10pt;
+            }
+
+            .page-shell {
+                width: 100%;
+                margin: 0;
+            }
+
+            .hero {
+                position: static;
+                width: 100%;
+                height: auto;
+                border: 0;
+            }
+
+            .hero,
+            .content-section {
+                box-shadow: none;
+                break-inside: auto;
+            }
+
+            .language-switch {
+                display: none;
+            }
+
+            main {
+                width: 100%;
+                margin-left: 0;
+                padding: 1rem 0;
+            }
+
+            a {
+                color: inherit;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="language-welcome" id="language-welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title" hidden>
-        <div class="welcome-content">
-            <h1 id="welcome-title" data-i18n="welcome-title">Select language</h1>
-            <p data-i18n="welcome-description">Choose a language to view my CV.</p>
-            <div class="language-options">
-                <button type="button" data-language-choice="en" data-i18n="language-english">English</button>
-                <button type="button" data-language-choice="id" data-i18n="language-indonesia">Indonesia</button>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-topline">
+                <div>
+                    <p class="eyebrow" data-i18n="eyebrow">Professional Profile</p>
+                    <h1>Dananjaya Tahmi Ilmi</h1>
+                    <p class="headline" data-i18n="headline">IT Operations & Technology Professional</p>
+                    <p class="specialties" data-i18n="specialties">Infrastructure | Database Operations | System Analysis | Application Support</p>
+                </div>
+                <nav class="language-switch" aria-label="Language">
+                    <button type="button" data-language="id" aria-pressed="true">ID</button>
+                    <button type="button" data-language="en" aria-pressed="false">EN</button>
+                </nav>
             </div>
-        </div>
+            <ul class="contact-list">
+                <li><span class="contact-label" data-i18n="location-label">Location</span><address data-i18n="location">Batang, Central Java, Indonesia</address></li>
+                <li><span class="contact-label" data-i18n="phone-label">Phone</span><a href="tel:+628157638754">+62 8157-638-754</a></li>
+                <li><span class="contact-label" data-i18n="email-label">Email</span><a href="mailto:tahmiilmii@gmail.com">tahmiilmii@gmail.com</a></li>
+                <li><span class="contact-label" data-i18n="network-label">Professional Network</span><a href="https://www.linkedin.com/in/dananjaya-tahmi-ilmi-35173b231/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+            <p class="availability" data-i18n="availability">Available for employment and project-based work</p>
+        </header>
+
+        <main>
+            <section class="content-section" aria-labelledby="summary-heading">
+                <div class="section-heading"><h2 id="summary-heading" data-i18n="summary-heading">Professional Summary</h2></div>
+                <p class="summary-copy" data-i18n="summary">IT operations and technology professional with 4+ years of hands-on infrastructure and database operations experience, alongside hospital application and operational support experience dating back to 2017. Work includes physical and virtualized server environments, VMware ESXi/vCenter, Windows Server, Linux, SQL Server and MariaDB operations, backup and recovery routines, monitoring, and troubleshooting. Also experienced in requirements and workflow analysis, documentation, application support, and project-based Python/SQL data processing and reporting.</p>
+            </section>
+
+            <section class="content-section" aria-labelledby="competencies-heading">
+                <div class="section-heading"><h2 id="competencies-heading" data-i18n="competencies-heading">Core Competencies</h2></div>
+                <div class="competency-grid">
+                    <article class="competency-card">
+                        <h3 data-i18n="competency-infra-title">Infrastructure & System Operations</h3>
+                        <p data-i18n="competency-infra">Day-to-day operation and monitoring of virtualized and physical server environments, Linux support, connectivity, backups, and incident troubleshooting.</p>
+                    </article>
+                    <article class="competency-card">
+                        <h3 data-i18n="competency-data-title">Database & Data Operations</h3>
+                        <p data-i18n="competency-data">SQL Server and MariaDB administration support, scheduled backup and restore workflows, access and maintenance tasks, plus practical SQL/Python data preparation and reporting.</p>
+                    </article>
+                    <article class="competency-card">
+                        <h3 data-i18n="competency-analysis-title">System Analysis & Application Support</h3>
+                        <p data-i18n="competency-analysis">Workflow and requirements documentation, coordination between users and technical teams, application troubleshooting, and functional testing.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" aria-labelledby="experience-heading">
+                <div class="section-heading"><h2 id="experience-heading" data-i18n="experience-heading">Professional Experience</h2></div>
+                <div class="experience-list">
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="role-current">IT Infrastructure & Operations | Database Operations | System Analysis</h3>
+                                <p class="company" data-i18n="company-batang">BLUD RSUD Batang · Central Java, Indonesia</p>
+                            </div>
+                            <time class="date" data-i18n="date-current">2022–Present</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="current-task-1">Operate and monitor a VMware vSphere 7 environment with ESXi and vCenter across a three-host cluster; provision virtual machines, manage snapshots, monitor host resources, and troubleshoot operational issues.</li>
+                            <li data-i18n="current-task-2">Administer a Supermicro physical server running Windows Server and Oracle VM VirtualBox for hospital application workloads; support Ubuntu and Debian through command-line administration and troubleshooting, and use Synology NAS for backup storage and operational data management.</li>
+                            <li data-i18n="current-task-3">Manage SQL Server Agent backup routines for Microsoft SQL Server 2008 R2 Standard Edition, including daily full backups at 03:00, transaction-log backups every 30 minutes, and scheduled cleanup of transaction-log backup files older than seven days.</li>
+                            <li data-i18n="current-task-4">Carry out database restoration and verification, maintenance, user/access administration, and performance investigation for SQL Server and MariaDB; use SQL Server Management Studio and Activity Monitor in routine operations.</li>
+                            <li data-i18n="current-task-5">Use PowerShell monitoring scripts to collect CPU, memory, network throughput, and C: drive free-space metrics every 10 seconds and export timestamped CSV reports; monitor server-rack and office-room temperatures and inspect Linux resource usage.</li>
+                            <li data-i18n="current-task-6">Support Cloudflare DNS and SSL/TLS certificate deployment and renewal, and use XAMPP or Laragon to check application access and troubleshoot PHP/Laravel application environments when needed.</li>
+                            <li data-i18n="current-task-7">Review outpatient registration workflows and AutoSEP issues, document user requirements, coordinate with the IT/development team, and participate in testing the “Buat SEP” menu enhancement.</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="role-outpatient-support">Outpatient Registration System & AutoSEP Support</h3>
+                                <p class="company" data-i18n="company-batang">BLUD RSUD Batang · Central Java, Indonesia</p>
+                            </div>
+                            <time class="date">2018–2021</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="support-task-1">Supported AutoSEP and BPJS-related workflows during overnight outpatient registration, identified application issues, and coordinated technical follow-up with the hospital IT team.</li>
+                            <li data-i18n="support-task-2">Assisted registration staff in maintaining operational continuity during application issues and prepared patient-data recaps based on Medical Records team requirements.</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="role-clinic-admin">Outpatient Clinic Administration & BPJS Application Support</h3>
+                                <p class="company" data-i18n="company-batang">BLUD RSUD Batang · Central Java, Indonesia</p>
+                            </div>
+                            <time class="date">2017–2018</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="clinic-task-1">Checked outpatient documents for completeness before confirming “Berkas OK” status in the hospital application, provided first-line assistance with BPJS-related applications, and helped staff adapt to workflow changes.</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="role-freelance">Independent IT, System Analysis & Technical Project Support</h3>
+                                <p class="company" data-i18n="company-freelance">Freelance · Concurrent, project-based work</p>
+                            </div>
+                            <time class="date" data-i18n="date-freelance">2019–Present</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="freelance-task-1">Gather and analyze client requirements and review workflows, translating needs into practical technical deliverables without assuming full development ownership for every project.</li>
+                            <li data-i18n="freelance-task-2">Prepare system documentation, use case/activity/sequence diagrams, interface wireframes (LKT), technical reports, and presentation materials; use a Waterfall-oriented approach where appropriate.</li>
+                            <li data-i18n="freelance-task-3">Support web application and small-program projects through functional review, troubleshooting, data validation, and black-box or white-box testing where appropriate.</li>
+                            <li data-i18n="freelance-task-4">Coordinate client feedback and change requests through digital channels and follow up on project requirements.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" aria-labelledby="projects-heading">
+                <div class="section-heading"><h2 id="projects-heading" data-i18n="projects-heading">Selected Technical Projects</h2></div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3 data-i18n="project-pharmacy-title">Pharmacy Data Extraction & Reporting</h3>
+                        <p class="project-meta" data-i18n="project-pharmacy-meta">Project-based workflow · 2026</p>
+                        <p data-i18n="project-pharmacy">Built a Python data extraction, transformation, and reporting workflow using Pandas, pymssql, SQL Server, and OpenPyXL. It detects and maps spreadsheet columns, normalizes registration identifiers, consolidates duplicate records, combines Excel data with SQL query results, calculates length of stay and medication counts, and generates formatted Excel reports with exception notes.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3 data-i18n="project-lab-title">SQL Server 2019 Personal Development Lab</h3>
+                        <p class="project-meta" data-i18n="project-lab-meta">Personal development lab</p>
+                        <p data-i18n="project-lab">Configured a local SQL Server 2019 environment in Docker on macOS, connected database clients including DBeaver and TablePlus, and practiced backup inspection, database restoration, and development-environment management. This is personal lab experience, not production hospital administration.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3 data-i18n="project-cpns-title">CPNS/PPPK Attendance System</h3>
+                        <p><span data-i18n="project-cpns">Contributed system analysis and requirements gathering for an attendance application, including workflow documentation and review of application requirements.</span><a href="https://presensi-cpns.gt.tc/" target="_blank" rel="noopener noreferrer" data-i18n="view-project">View project</a></p>
+                    </article>
+                    <article class="project-card">
+                        <h3 data-i18n="project-genkai-title">Genkai Cloth Digital Catalog</h3>
+                        <p><span data-i18n="project-genkai">Designed, developed, and managed a WordPress-based brand profile and digital catalog, with a minimalist presentation focused on the products.</span><a href="https://genkaicloth.wordpress.com" target="_blank" rel="noopener noreferrer" data-i18n="view-project">View project</a></p>
+                    </article>
+                    <article class="project-card">
+                        <h3 data-i18n="project-enrollment-title">Student Enrollment System</h3>
+                        <p><span data-i18n="project-enrollment">Mapped system requirements and administrative workflows for a boarding school’s digital student enrollment process.</span><a href="http://pendaftaran-santri.gt.tc/" target="_blank" rel="noopener noreferrer" data-i18n="view-project">View project</a></p>
+                    </article>
+                    <article class="project-card">
+                        <h3 data-i18n="project-cafe-title">Café POS & QRIS Integration</h3>
+                        <p><span data-i18n="project-cafe">Analyzed business needs and documented functional requirements for a café point-of-sale workflow, including QR-based menus and digital payments.</span><a href="https://lapioskopi.gt.tc/?i=1" target="_blank" rel="noopener noreferrer" data-i18n="view-project">View project</a></p>
+                    </article>
+                    <article class="project-card">
+                        <h3 data-i18n="project-statistics-title">Statistical Data Analysis</h3>
+                        <p data-i18n="project-statistics">Processed, validated, and analyzed quantitative academic research data using IBM SPSS to support university thesis work.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" aria-labelledby="leadership-heading">
+                <div class="section-heading"><h2 id="leadership-heading" data-i18n="leadership-heading">Leadership & Organizational Experience</h2></div>
+                <div class="experience-list">
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="fun-basket-role">Organizational Committee Member, Event MC & Sponsorship Support</h3>
+                                <p class="company">Fun Basket Pekalongan</p>
+                            </div>
+                            <time class="date">2023–2025</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="fun-basket-1">Supported general organizational activities and event execution as a committee member without a formal division title.</li>
+                            <li data-i18n="fun-basket-2">Regularly served as Master of Ceremonies for club events and supported sponsorship through Genkai Clothing merchandise for mini-game prizes.</li>
+                            <li data-i18n="fun-basket-3">Helped identify and connect potential external sponsors.</li>
+                        </ul>
+                    </article>
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="color-run-role">General Chairperson & Event Lead</h3>
+                                <p class="company">Indonesia Color Run Pekalongan</p>
+                            </div>
+                            <time class="date">2019</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="color-run-1">Served as General Chairperson and overall person in charge for the 2019 Pekalongan event, held under a national organization that selected Pekalongan as one of its event locations.</li>
+                            <li data-i18n="color-run-2">Led planning and execution, coordinated committee members, delegated responsibilities, monitored preparation progress, and oversaw collaboration across divisions and event operations.</li>
+                        </ul>
+                    </article>
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="hikari-role">Club President</h3>
+                                <p class="company">Hikari Japanese Culture Community</p>
+                            </div>
+                            <time class="date">2016–2017</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="hikari-1">Led the Japanese culture community during vocational high school, managing members and activities, organizing internal events, and coordinating projects presented at school and external events.</li>
+                            <li data-i18n="hikari-2">Delegated responsibilities and coordinated members to support successful project execution.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" aria-labelledby="entrepreneur-heading">
+                <div class="section-heading"><h2 id="entrepreneur-heading" data-i18n="entrepreneur-heading">Entrepreneurial Experience</h2></div>
+                <article class="experience-item">
+                    <header class="experience-header">
+                        <div>
+                            <h3 data-i18n="lingkar-role">Founder & Owner, Wedding Organizer</h3>
+                            <p class="company">Lingkar Creative</p>
+                        </div>
+                        <time class="date">2018–2019</time>
+                    </header>
+                    <ul class="detail-list">
+                        <li data-i18n="lingkar-1">Founded and independently managed the business, coordinating approximately five client projects.</li>
+                        <li data-i18n="lingkar-2">Managed budgets and client communication; sourced and negotiated with vendors, recruited and coordinated freelance teams, and oversaw schedules, preparations, and on-site execution.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="content-section" aria-labelledby="early-heading">
+                <div class="section-heading"><h2 id="early-heading" data-i18n="early-heading">Early Technical Experience & Achievements</h2></div>
+                <div class="experience-list">
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="lks-role">Lomba Kompetensi Siswa (LKS) TKJ — 2nd Place</h3>
+                                <p class="company" data-i18n="lks-context">District level · 2nd among 26 school representatives</p>
+                            </div>
+                            <time class="date">2016</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="lks-1">Selected to represent vocational school in the district-level Computer and Network Engineering competition.</li>
+                            <li data-i18n="lks-2">Completed practical challenges in web server administration and MikroTik networking, including website access filtering and exception-rule configuration.</li>
+                            <li data-i18n="lks-3">Achieved second place among 26 school representatives, with one student representing each school.</li>
+                        </ul>
+                    </article>
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div>
+                                <h3 data-i18n="intern-role">Computer Lab Intern</h3>
+                                <p class="company">ICT Center SMK Negeri 1 Batang</p>
+                            </div>
+                            <time class="date" data-i18n="intern-date">2016 · Six-month internship</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="intern-1">Managed and maintained two computer laboratories, supported daily lab operations and technical activities, and occasionally mentored junior students in computer-related subjects and practical work.</li>
+                        </ul>
+                    </article>
+                    <article class="experience-item">
+                        <header class="experience-header">
+                            <div><h3 data-i18n="mikrotik-role">MikroTik Technical Training Participant</h3></div>
+                            <time class="date" data-i18n="mikrotik-date">Vocational high school · Two-day training</time>
+                        </header>
+                        <ul class="detail-list">
+                            <li data-i18n="mikrotik-1">Completed hands-on networking exercises using MikroTik devices supplied by the external training organizer. A training certificate was received; the document is currently unavailable. No official MikroTik certification is claimed.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" aria-labelledby="education-heading">
+                <div class="section-heading"><h2 id="education-heading" data-i18n="education-heading">Education</h2></div>
+                <article class="experience-item">
+                    <header class="experience-header">
+                        <div>
+                            <h3 data-i18n="degree">Bachelor of Informatics Engineering (S.Kom.)</h3>
+                            <p class="company">STMIK Widya Pratama Pekalongan, Indonesia</p>
+                        </div>
+                        <time class="date" data-i18n="graduation-date">Graduated 2024</time>
+                    </header>
+                </article>
+            </section>
+
+            <section class="content-section" aria-labelledby="training-heading">
+                <div class="section-heading"><h2 id="training-heading" data-i18n="training-heading">Professional Development</h2></div>
+                <ul class="training-list">
+                    <li><strong data-i18n="training-1-title">MOC 20740: Installation, Storage, and Compute with Windows Server 2016</strong><span data-i18n="training-1-meta">Inixindo Jogja · February 2023</span></li>
+                    <li><strong data-i18n="training-2-title">PK FEST 2022 — Python Practice for AI Coding</strong><span data-i18n="training-2-meta">STMIK Widya Pratama Pekalongan · January 2022</span></li>
+                    <li><strong data-i18n="training-3-title">Technical Training on Public Information Openness and Public Data Confidentiality</strong><span data-i18n="training-3-meta">ARSADA Central Java · 18 September 2026</span></li>
+                </ul>
+                <h3 class="subsection-heading" data-i18n="webinars-heading">Additional Learning & Webinars</h3>
+                <ul class="training-list">
+                    <li><strong data-i18n="webinar-5-title">The BI Blueprint: Transforming Raw Data into Actionable Strategy</strong><span data-i18n="webinar-5-meta">Inixindo Jogja · Yogyakarta · 12 November 2026 · 2 learning hours</span></li>
+                    <li><strong data-i18n="webinar-1-title">Leveling Up Your Data Science and Machine Learning Knowledge Under 90 Minutes</strong><span data-i18n="webinar-1-meta">Dilatih.co · March 2022</span></li>
+                    <li><strong data-i18n="webinar-2-title">Bright Future of Data Science — PK FEST 2022</strong><span data-i18n="webinar-2-meta">STMIK Widya Pratama · January 2022</span></li>
+                    <li><strong data-i18n="webinar-3-title">Data Analyst Webinar</strong><span data-i18n="webinar-3-meta">GenBI Diponegoro University Commission · January 2021</span></li>
+                    <li><strong data-i18n="webinar-4-title">Survey Visualization Using Google Data Studio — Inspiring Professional Series 26</strong><span data-i18n="webinar-4-meta">Perkumpulan Teachpreneur Indonesia Cerdas (PTIC) · March 2022</span></li>
+                </ul>
+            </section>
+
+            <section class="content-section" aria-labelledby="skills-heading">
+                <div class="section-heading"><h2 id="skills-heading" data-i18n="skills-heading">Technical Skills & Tools</h2></div>
+                <div class="skill-grid">
+                    <article class="skill-card">
+                        <h3 data-i18n="skill-infrastructure-title">Infrastructure & Virtualization</h3>
+                        <p data-i18n="skill-infrastructure">VMware ESXi/vCenter, Windows Server, Supermicro physical servers, Oracle VM VirtualBox, Ubuntu, Debian, Synology NAS, Docker (personal lab), virtual machine provisioning and snapshots.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n="skill-database-title">Database & Database Tools</h3>
+                        <p data-i18n="skill-database">Microsoft SQL Server 2008 R2, MariaDB, SQL, SQL Server Management Studio, SQL Server Agent, DBeaver, TablePlus, HeidiSQL, Adminer. SQL Server 2019 used in a personal development lab.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n="skill-monitoring-title">Backup, Monitoring & Connectivity</h3>
+                        <p data-i18n="skill-monitoring">Database backup and restoration, transaction-log backup routines and cleanup, SQL Server Activity Monitor, PowerShell, Linux CLI, SSH, RDP, Cloudflare DNS, SSL/TLS deployment support.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n="skill-data-title">Data Processing & Development</h3>
+                        <p data-i18n="skill-data">Python, Pandas, pymssql, OpenPyXL, PHP/Laravel application support, XAMPP, Laragon, WordPress.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n="skill-analysis-title">System Analysis & Quality</h3>
+                        <p data-i18n="skill-analysis">Requirements and workflow analysis, use case/activity/sequence diagrams, interface wireframes (LKT), process documentation, functional testing, black-box and white-box testing, data validation.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n="skill-productivity-title">Productivity & Analytics</h3>
+                        <p data-i18n="skill-productivity">Microsoft Word, Excel, PowerPoint, Visio, IBM SPSS.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n="skill-ai-title">AI & Productivity Tools</h3>
+                        <p data-i18n="skill-ai">ChatGPT for technical consultation and documentation; Claude for coding assistance, Python scripting, and code review; Perplexity AI for research; GitHub Copilot for coding assistance in Visual Studio Code; and Google Gemini for OCR and information processing.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
     </div>
-
-    <!-- SIDEBAR KIRI -->
-    <aside class="sidebar">
-        <div class="header-info">
-            <h1>Dananjaya Tahmi Ilmi</h1>
-            <div class="tagline" data-i18n="tagline">IT Infrastructure & Database Operations · System Analysis</div>
-
-            <div class="contact-block">
-                <span data-i18n="location-label">Location</span>
-                <span class="contact-value" data-i18n="location">Batang, Central Java, Indonesia</span>
-            </div>
-
-            <div class="contact-block">
-                <span data-i18n="phone-label">Phone</span>
-                <span class="contact-value">+62 8157-638-754</span>
-            </div>
-
-            <div class="contact-block">
-                <span data-i18n="email-label">Email</span>
-                <a href="mailto:tahmiilmii@gmail.com">tahmiilmii@gmail.com</a>
-            </div>
-        </div>
-
-        <div class="sidebar-footer">
-            <div class="contact-block" style="margin-bottom: 1rem;">
-                <span data-i18n="network-label">Professional Network</span>
-                <a href="https://www.linkedin.com/in/dananjaya-tahmi-ilmi-35173b231/" target="_blank" style="margin-right: 15px;">LinkedIn</a>
-            </div>
-
-            <div class="contact-block" style="margin-bottom: 0;">
-                <span data-i18n="status-label">Current Status</span>
-                <span data-i18n="status-value" style="font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; color: var(--black);">AVAILABLE FOR WORK / FREELANCE</span>
-            </div>
-            <button type="button" class="language-switch" id="change-language" data-i18n="change-language">Change language</button>
-        </div>
-    </aside>
-
-    <!-- KONTEN KANAN -->
-    <main class="main-content">
-
-        <section>
-            <h2 data-i18n="summary-heading">Professional Summary</h2>
-            <p data-i18n="summary">IT professional with 4+ years of hands-on experience running production servers and databases at a public hospital, building on hospital application support experience since 2017. Skilled in VMware ESXi/vCenter, Windows Server, Linux, SQL Server backup and recovery, and system monitoring. Bridges operations and system analysis through requirements documentation, cross-team coordination, and functional testing. Also delivers independent projects in requirements analysis, web development, and software testing.</p>
-        </section>
-
-        <section>
-            <h2 data-i18n="experience-heading">Professional Experience</h2>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <div class="job-title" data-i18n="role-current">IT Infrastructure & Operations | Database Management | System Analysis</div>
-                        <div class="job-company" data-i18n="company-batang">BLUD RSUD Batang · Central Java</div>
-                    </div>
-                    <div class="job-date" data-i18n="date-current">2022 – Present</div>
-                </div>
-                <ul class="tasks">
-                    <li data-i18n="current-task-1"><strong>Virtualization:</strong> Operate and monitor VMware ESXi/vCenter, including VM provisioning, snapshots, host/resource monitoring, and troubleshooting.</li>
-                    <li data-i18n="current-task-2"><strong>Servers:</strong> Administer a Supermicro physical server running Windows Server and Oracle VM VirtualBox that hosts several hospital applications; support Ubuntu/Debian Linux, user/service administration, and selected network tasks.</li>
-                    <li data-i18n="current-task-3"><strong>Backup & Recovery:</strong> Manage SQL Server Agent jobs: full backups daily at 03:00, transaction-log backups every 30 minutes, and cleanup of backups older than 7 days.</li>
-                    <li data-i18n="current-task-4"><strong>Database Operations:</strong> Perform restore and verification, maintenance, user/access management, and performance investigation across SQL Server and MariaDB.</li>
-                    <li data-i18n="current-task-5"><strong>Monitoring & Incidents:</strong> Check system health with SQL Server Activity Monitor and Linux command-line tools; coordinate with relevant teams to resolve incidents.</li>
-                    <li data-i18n="current-task-6"><strong>Certificates:</strong> Support SSL/TLS certificate deployment and renewal; use local XAMPP/Laragon environments for application access checks.</li>
-                    <li data-i18n="current-task-7"><strong>System Analysis:</strong> Analyzed outpatient registration workflows and AutoSEP issues, documented user requirements, coordinated with the IT/development team, and tested the “Buat SEP” menu enhancement.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <div class="job-title" data-i18n="role-outpatient-support">Outpatient Registration System & AutoSEP Support</div>
-                        <div class="job-company" data-i18n="company-batang">BLUD RSUD Batang · Central Java</div>
-                    </div>
-                    <div class="job-date">2018 – 2021</div>
-                </div>
-                <ul class="tasks">
-                    <li data-i18n="support-task-1">Supported AutoSEP and BPJS workflows during overnight outpatient registration, identifying application errors and coordinating resolution with the hospital IT team.</li>
-                    <li data-i18n="support-task-2">Kept outpatient registration running when AutoSEP issues disrupted the workflow, and supported registration staff.</li>
-                    <li data-i18n="support-task-3">Prepared patient-data recaps to criteria requested by the Medical Records team.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <div class="job-title" data-i18n="role-clinic-admin">Outpatient Clinic Administration & BPJS Application Support</div>
-                        <div class="job-company" data-i18n="company-batang">BLUD RSUD Batang · Central Java</div>
-                    </div>
-                    <div class="job-date">2017 – 2018</div>
-                </div>
-                <ul class="tasks">
-                    <li data-i18n="clinic-task-1">Screened outpatient documents for completeness before confirming “Berkas OK” status in the hospital application.</li>
-                    <li data-i18n="clinic-task-2">Gave first-line support to clinic administrators using the BPJS-related application and troubleshot basic system and workflow issues.</li>
-                    <li data-i18n="clinic-task-3">Helped clinic staff adapt to updated BPJS system workflows while following document-validation procedures.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <div class="job-title" data-i18n="role-freelance">Independent IT, System Analysis & Technical Project Support</div>
-                        <div class="job-company" data-i18n="company-freelance">Freelance · Project-based</div>
-                    </div>
-                    <div class="job-date" data-i18n="date-freelance">2019 – Present</div>
-                </div>
-                <ul class="tasks">
-                    <li data-i18n="freelance-task-1">Gather and analyze client requirements, review workflows, and translate needs into practical web and technical deliverables.</li>
-                    <li data-i18n="freelance-task-2">Contribute to web application and small-program projects through system analysis, troubleshooting, and software testing (black-box, white-box, and User Acceptance Testing (UAT)).</li>
-                    <li data-i18n="freelance-task-3">Follow up with clients through digital channels to gather feedback and accommodate change requests.</li>
-                    <li data-i18n="freelance-task-4">Prepare technical documentation, reports, and presentation materials; follow a Waterfall approach based on Pressman’s software engineering methodology.</li>
-                </ul>
-
-                <p class="sub-heading" data-i18n="projects-heading">Notable Completed Projects</p>
-                <ul class="tasks project-list">
-                    <li data-i18n="project-1">
-                        <span class="project-title">Genkai Cloth Brand Website:</span> Designed, developed, and managed a WordPress-based digital catalog and brand profile, optimizing UI/UX for minimalist aesthetics and product showcases.
-                        <a href="https://genkaicloth.wordpress.com" target="_blank" class="project-link">View Site ↗</a>
-                    </li>
-                    <li data-i18n="project-2">
-                        <span class="project-title">Civil Servant (CPNS/PPPK) Attendance System:</span> Conducted system analysis and requirement gathering for a secure attendance tracking application used during official candidate examinations.
-                        <a href="https://presensi-cpns.gt.tc/" target="_blank" class="project-link">View Site ↗</a>
-                    </li>
-                    <li data-i18n="project-3">
-                        <span class="project-title">Student Enrollment System:</span> Mapped system requirements and administrative workflows to digitalize the new student registration process for an Islamic boarding school.
-                        <a href="http://pendaftaran-santri.gt.tc/" target="_blank" class="project-link">View Site ↗</a>
-                    </li>
-                    <li data-i18n="project-4">
-                        <span class="project-title">Cafe POS & QRIS Integration:</span> Analyzed business needs to design functional requirements for a comprehensive Point of Sale (POS) system featuring QR-based menus and digital payments.
-                        <a href="https://lapioskopi.gt.tc/?i=1" target="_blank" class="project-link">View Site ↗</a>
-                    </li>
-                    <li data-i18n="project-5">
-                        <span class="project-title">Statistical Data Analysis:</span> Processed, validated, and analyzed quantitative academic research data using IBM SPSS to support university thesis requirements.
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2 data-i18n="skills-heading">Core Technical Skills</h2>
-            <ul class="tasks">
-                <li data-i18n="skill-1"><strong>Infrastructure:</strong> VMware ESXi/vCenter, Windows Server, Oracle VM VirtualBox, Supermicro physical server, Ubuntu, Debian, Synology NAS, VM provisioning & snapshots.</li>
-                <li data-i18n="skill-2"><strong>Databases:</strong> SQL Server 2008 R2 (SSMS, SQL Server Agent), MariaDB, scheduled full/log backups, restore, retention cleanup, user access, performance investigation.</li>
-                <li data-i18n="skill-3"><strong>DB Tools:</strong> DBeaver, TablePlus, HeidiSQL, Adminer; SQL Server 2019 (personal lab).</li>
-                <li data-i18n="skill-4"><strong>Monitoring & Network:</strong> SQL Server Activity Monitor, Linux command line, PowerShell, SSH, RDP, Cloudflare DNS, SSL/TLS certificate deployment.</li>
-                <li data-i18n="skill-5"><strong>Analysis & QA:</strong> Requirements & workflow analysis, process documentation, functional testing, black-box/white-box testing, data validation.</li>
-                <li data-i18n="skill-6"><strong>Dev & Productivity:</strong> XAMPP, Laragon, PHP/Laravel application support, WordPress; Microsoft Word, Excel, PowerPoint, Visio; IBM SPSS.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2 data-i18n="education-heading">Education</h2>
-            <div class="experience-item" style="margin-bottom: 0;">
-                <div class="experience-header">
-                    <div>
-                        <div class="job-title" data-i18n="degree">Bachelor of Informatics Engineering (S.Kom.)</div>
-                        <div class="job-company">STMIK Widya Pratama Pekalongan</div>
-                    </div>
-                    <div class="job-date">2017 – 2024</div>
-                </div>
-                <p data-i18n="education-focus" style="font-size: 1rem; margin-top: 0.5rem; text-align: left;">Focus: Mobile & Web Development • GPA: 3.03 / 4.00</p>
-            </div>
-        </section>
-
-        <section>
-            <h2 data-i18n="training-heading">Training & Certification</h2>
-            <ul class="tasks">
-                <li data-i18n="training-1"><strong>Microsoft Official Course: MOC 20740 — Installation, Storage, and Compute with Windows Server 2016:</strong> Completed training in Windows Server installation, storage, and compute. — Inixindo Jogja, February 2023</li>
-                <li data-i18n="training-2"><strong>PK FEST 2022 Bootcamp — Python Practice for AI Coding:</strong> Learned and practiced Python programming fundamentals for developing AI-based solutions. — STMIK Widya Pratama Pekalongan, January 2022</li>
-                <li data-i18n="training-3"><strong>Pelatihan Teknis Keterbukaan Informasi Publik dan Kerahasiaan Data Publik:</strong> Covered public information service standards for hospital PPID, cybersecurity and protection of hospital system information, and personal data protection. — ARSADA Central Java, 18 September 2026 (3 learning hours)</li>
-                <li data-i18n="training-4"><strong>National Webinar — Leveling Up Your Data Science and Machine Learning Knowledge Under 90 Minutes:</strong> Explored Data Science and Machine Learning for data processing, information analysis, and data-driven solutions. — Dilatih.co, March 2022</li>
-                <li data-i18n="training-5"><strong>Webinar PK FEST 2022 — Bright Future of Data Science:</strong> Expanded knowledge of Data Science, its development, and its role in information analysis and decision-making. — STMIK Widya Pratama, January 2022</li>
-                <li data-i18n="training-6"><strong>Data Analyst Webinar:</strong> Gained insights into data analysis and its role in supporting data-driven decision-making. — Generasi Baru Indonesia (GenBI), Diponegoro University Commission, January 2021</li>
-                <li data-i18n="training-7"><strong>Inspiring Professional Series 26 — Survey Visualization Using Google Data Studio:</strong> Covered survey data visualization for presenting information in a structured, easy-to-understand way. — Perkumpulan Teachpreneur Indonesia Cerdas (PTIC), March 2022</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2 data-i18n="systems-heading">SELECTED SYSTEMS & PROJECT CONTEXT</h2>
-            <ul class="tasks">
-                <li data-i18n="system-1"><strong>Outpatient Registration and AutoSEP Workflow Improvement:</strong> Requirements analysis, documentation, coordination, and testing of the “Buat SEP” menu enhancement</li>
-                <li data-i18n="system-2"><strong>Pharmacy Operational Data Extraction and Reporting:</strong> Developed a Python workflow using Pandas, pymssql, SQL Server queries, and OpenPyXL to combine Excel patient records with inpatient prescription and patient-weight data, calculate length of stay and medication counts, and generate a structured Excel report with exception notes</li>
-                <li data-i18n="system-3"><strong>Production Infrastructure and Database Operations:</strong> VMware monitoring, SQL Server Agent backup schedules, restoration, database maintenance, and troubleshooting</li>
-            </ul>
-        </section>
-    </main>
 
     <script>
         const indonesianTranslations = {
-            "welcome-title": "Pilih Bahasa",
-            "welcome-description": "Silakan pilih bahasa untuk melihat CV saya.",
-            "language-english": "English",
-            "language-indonesia": "Bahasa Indonesia",
-            "tagline": "Infrastruktur TI & Operasional Database · Analisis Sistem",
+            "eyebrow": "Profil Profesional",
+            "headline": "Profesional Operasional TI & Teknologi",
+            "specialties": "Infrastruktur | Operasional Database | Analisis Sistem | Dukungan Aplikasi",
             "location-label": "Lokasi",
             "location": "Batang, Jawa Tengah, Indonesia",
-            "company-batang": "BLUD RSUD Batang · Jawa Tengah",
-            "company-freelance": "Freelance · Berbasis proyek",
-            "date-current": "2022 – Sekarang",
-            "date-freelance": "2019 – Sekarang",
             "phone-label": "Telepon",
             "email-label": "Email",
             "network-label": "Profil Profesional",
-            "status-label": "Status",
-            "status-value": "TERBUKA UNTUK PELUANG KERJA / FREELANCE",
-            "change-language": "Ganti bahasa",
-            "summary-heading": "Profil Singkat",
-            "summary": "Profesional TI dengan pengalaman lebih dari 4 tahun mengelola server dan database produksi di rumah sakit umum, serta pengalaman mendukung aplikasi rumah sakit sejak 2017. Terbiasa menangani VMware ESXi/vCenter, Windows Server, Linux, pencadangan dan pemulihan SQL Server, serta pemantauan sistem. Selain operasional, juga berpengalaman menggali dan mendokumentasikan kebutuhan, berkoordinasi dengan berbagai tim, serta melakukan pengujian fungsional. Menangani proyek mandiri di bidang analisis kebutuhan, pengembangan web, dan pengujian perangkat lunak.",
+            "availability": "Terbuka untuk pekerjaan dan proyek freelance",
+            "summary-heading": "Ringkasan Profesional",
+            "summary": "Profesional operasional TI dan teknologi dengan pengalaman langsung lebih dari 4 tahun dalam operasional infrastruktur dan database, serta pengalaman mendukung aplikasi dan operasional rumah sakit sejak 2017. Berpengalaman menangani lingkungan server fisik dan virtual, VMware ESXi/vCenter, Windows Server, Linux, operasional SQL Server dan MariaDB, proses backup dan pemulihan, pemantauan, serta troubleshooting. Juga berpengalaman dalam analisis kebutuhan dan alur kerja, dokumentasi, dukungan aplikasi, serta pengolahan dan pelaporan data berbasis Python/SQL untuk proyek.",
+            "competencies-heading": "Kompetensi Utama",
+            "competency-infra-title": "Infrastruktur & Operasional Sistem",
+            "competency-infra": "Operasional dan pemantauan harian lingkungan server virtual maupun fisik, dukungan Linux, konektivitas, backup, serta penanganan kendala operasional.",
+            "competency-data-title": "Operasional Database & Data",
+            "competency-data": "Dukungan administrasi SQL Server dan MariaDB, alur backup terjadwal dan pemulihan, pengelolaan akses dan pemeliharaan, serta penyiapan dan pelaporan data praktis dengan SQL/Python.",
+            "competency-analysis-title": "Analisis Sistem & Dukungan Aplikasi",
+            "competency-analysis": "Dokumentasi alur kerja dan kebutuhan, koordinasi antara pengguna dan tim teknis, troubleshooting aplikasi, serta pengujian fungsional.",
             "experience-heading": "Pengalaman Profesional",
-            "role-current": "Infrastruktur & Operasional TI | Database | Analisis Sistem",
-            "current-task-1": "<strong>Virtualisasi:</strong> Mengelola dan memantau VMware ESXi/vCenter, mulai dari menyiapkan VM dan snapshot hingga memantau host serta menangani kendala.",
-            "current-task-2": "<strong>Server:</strong> Mengelola server fisik Supermicro berbasis Windows Server dan Oracle VM VirtualBox untuk menjalankan sejumlah aplikasi rumah sakit. Juga mendukung Ubuntu/Debian Linux, pengelolaan akun dan layanan, serta beberapa kebutuhan jaringan.",
-            "current-task-3": "<strong>Pencadangan & Pemulihan:</strong> Menjadwalkan dan memantau tugas SQL Server Agent, termasuk backup penuh harian pukul 03.00, backup transaction log setiap 30 menit, serta penghapusan backup yang berusia lebih dari 7 hari.",
-            "current-task-4": "<strong>Database:</strong> Menangani pemulihan dan verifikasi data, pemeliharaan database, pengelolaan akun dan akses, serta pengecekan performa SQL Server dan MariaDB.",
-            "current-task-5": "<strong>Pemantauan & Penanganan Insiden:</strong> Memantau kondisi sistem lewat SQL Server Activity Monitor dan command line Linux, serta berkoordinasi dengan tim terkait saat terjadi kendala.",
-            "current-task-6": "<strong>Sertifikat:</strong> Membantu pemasangan dan pembaruan sertifikat SSL/TLS, serta mengecek akses aplikasi melalui lingkungan lokal XAMPP/Laragon.",
-            "current-task-7": "<strong>Analisis Sistem:</strong> Meninjau alur pendaftaran rawat jalan dan kendala AutoSEP, mencatat kebutuhan pengguna, berkoordinasi dengan tim TI/pengembangan, dan menguji pembaruan menu “Buat SEP”.",
-            "role-outpatient-support": "Dukungan Pendaftaran Rawat Jalan & AutoSEP",
-            "support-task-1": "Mendampingi proses pendaftaran rawat jalan malam hari, membantu menangani kendala AutoSEP dan BPJS, lalu berkoordinasi dengan tim TI rumah sakit untuk tindak lanjut.",
-            "support-task-2": "Membantu menjaga layanan pendaftaran rawat jalan tetap berjalan saat AutoSEP bermasalah, sekaligus mendukung petugas pendaftaran.",
-            "support-task-3": "Menyusun rekap data pasien sesuai kebutuhan tim Rekam Medis.",
+            "role-current": "Infrastruktur & Operasional TI | Operasional Database | Analisis Sistem",
+            "company-batang": "BLUD RSUD Batang · Jawa Tengah, Indonesia",
+            "date-current": "2022–Sekarang",
+            "current-task-1": "Mengoperasikan dan memantau lingkungan VMware vSphere 7 dengan ESXi dan vCenter pada cluster tiga host; menyediakan virtual machine, mengelola snapshot, memantau resource host, dan menangani kendala operasional.",
+            "current-task-2": "Mengelola server fisik Supermicro berbasis Windows Server dan Oracle VM VirtualBox untuk kebutuhan aplikasi rumah sakit; mendukung Ubuntu dan Debian melalui administrasi command line dan troubleshooting, serta menggunakan Synology NAS untuk penyimpanan backup dan pengelolaan data operasional.",
+            "current-task-3": "Mengelola rutinitas backup SQL Server Agent untuk Microsoft SQL Server 2008 R2 Standard Edition, termasuk backup penuh harian pukul 03.00, backup transaction log setiap 30 menit, dan pembersihan terjadwal file backup transaction log yang berusia lebih dari tujuh hari.",
+            "current-task-4": "Melakukan pemulihan dan verifikasi database, pemeliharaan, pengelolaan pengguna/akses, dan pemeriksaan performa SQL Server serta MariaDB; menggunakan SQL Server Management Studio dan Activity Monitor dalam operasional rutin.",
+            "current-task-5": "Menggunakan skrip pemantauan PowerShell untuk mengumpulkan metrik CPU, memori, throughput jaringan, dan ruang kosong drive C: setiap 10 detik serta mengekspor laporan CSV bertimestamp; memantau suhu area rak server dan ruang kantor serta memeriksa penggunaan resource Linux.",
+            "current-task-6": "Mendukung Cloudflare DNS serta pemasangan dan pembaruan sertifikat SSL/TLS, dan menggunakan XAMPP atau Laragon untuk memeriksa akses aplikasi serta membantu troubleshooting lingkungan aplikasi PHP/Laravel bila diperlukan.",
+            "current-task-7": "Meninjau alur pendaftaran rawat jalan dan kendala AutoSEP, mendokumentasikan kebutuhan pengguna, berkoordinasi dengan tim TI/pengembangan, dan berpartisipasi dalam pengujian penyempurnaan menu “Buat SEP”.",
+            "role-outpatient-support": "Dukungan Sistem Pendaftaran Rawat Jalan & AutoSEP",
+            "support-task-1": "Mendukung alur AutoSEP dan BPJS saat operasional pendaftaran rawat jalan malam hari, mengidentifikasi kendala aplikasi, dan berkoordinasi dengan tim TI rumah sakit untuk tindak lanjut teknis.",
+            "support-task-2": "Membantu petugas pendaftaran menjaga kelangsungan operasional saat terjadi kendala aplikasi serta menyiapkan rekap data pasien sesuai kebutuhan tim Rekam Medis.",
             "role-clinic-admin": "Administrasi Klinik Rawat Jalan & Dukungan Aplikasi BPJS",
-            "clinic-task-1": "Memeriksa kelengkapan dokumen pasien rawat jalan sebelum memperbarui status menjadi “Berkas OK” di aplikasi rumah sakit.",
-            "clinic-task-2": "Membantu administrator klinik menggunakan aplikasi terkait BPJS dan menangani kendala dasar pada aplikasi maupun alur kerja.",
-            "clinic-task-3": "Mendampingi staf klinik saat menyesuaikan diri dengan pembaruan alur kerja BPJS, sambil tetap mengikuti prosedur validasi dokumen.",
-            "role-freelance": "Proyek Freelance di Bidang TI, Analisis Sistem & Dukungan Teknis",
-            "freelance-task-1": "Menggali kebutuhan klien, meninjau alur kerja, lalu menyusun solusi web dan teknis yang sesuai kebutuhan.",
-            "freelance-task-2": "Mendukung proyek aplikasi web dan program sederhana melalui analisis sistem, penanganan kendala, serta pengujian perangkat lunak (black-box, white-box, dan User Acceptance Testing (UAT)).",
-            "freelance-task-3": "Berkomunikasi dengan klien secara online untuk menampung masukan dan menindaklanjuti permintaan perubahan.",
-            "freelance-task-4": "Menyiapkan dokumentasi teknis, laporan, dan materi presentasi. Dalam pengerjaan proyek, menggunakan pendekatan Waterfall berdasarkan metodologi Pressman.",
-            "projects-heading": "Proyek Pilihan",
-            "project-1": "<span class=\"project-title\">Situs Brand Genkai Cloth:</span> Membuat dan mengelola katalog digital serta profil brand berbasis WordPress, dengan tampilan minimalis yang menonjolkan produk dan pengalaman pengguna.<a href=\"https://genkaicloth.wordpress.com\" target=\"_blank\" class=\"project-link\">Lihat Situs ↗</a>",
-            "project-2": "<span class=\"project-title\">Sistem Presensi CPNS/PPPK:</span> Menganalisis kebutuhan dan merancang sistem presensi yang aman untuk pelaksanaan ujian calon pegawai.<a href=\"https://presensi-cpns.gt.tc/\" target=\"_blank\" class=\"project-link\">Lihat Situs ↗</a>",
-            "project-3": "<span class=\"project-title\">Sistem Pendaftaran Santri:</span> Memetakan kebutuhan sistem dan alur administrasi untuk membantu proses pendaftaran santri baru secara digital.<a href=\"http://pendaftaran-santri.gt.tc/\" target=\"_blank\" class=\"project-link\">Lihat Situs ↗</a>",
-            "project-4": "<span class=\"project-title\">Integrasi POS Kafe & QRIS:</span> Menganalisis kebutuhan usaha dan merancang fitur sistem kasir (POS), termasuk menu berbasis QR dan pembayaran digital.<a href=\"https://lapioskopi.gt.tc/?i=1\" target=\"_blank\" class=\"project-link\">Lihat Situs ↗</a>",
-            "project-5": "<span class=\"project-title\">Analisis Data Statistik:</span> Mengolah, memeriksa, dan menganalisis data penelitian kuantitatif menggunakan IBM SPSS untuk mendukung penyusunan skripsi.",
-            "skills-heading": "Keahlian Teknis",
-            "skill-1": "<strong>Infrastruktur:</strong> VMware ESXi/vCenter, Windows Server, Oracle VM VirtualBox, server Supermicro, Ubuntu, Debian, Synology NAS, pengelolaan VM dan snapshot.",
-            "skill-2": "<strong>Database:</strong> SQL Server 2008 R2 (SSMS, SQL Server Agent), MariaDB, backup penuh dan transaction log terjadwal, pemulihan, pengelolaan retensi dan akses pengguna, pengecekan performa.",
-            "skill-3": "<strong>Tools Database:</strong> DBeaver, TablePlus, HeidiSQL, Adminer; SQL Server 2019 (lab pribadi).",
-            "skill-4": "<strong>Pemantauan & Jaringan:</strong> SQL Server Activity Monitor, command line Linux, PowerShell, SSH, RDP, Cloudflare DNS, pemasangan sertifikat SSL/TLS.",
-            "skill-5": "<strong>Analisis & QA:</strong> Analisis kebutuhan dan alur kerja, dokumentasi proses, pengujian fungsional, black-box/white-box, serta validasi data.",
-            "skill-6": "<strong>Pengembangan & Produktivitas:</strong> XAMPP, Laragon, dukungan aplikasi PHP/Laravel, WordPress, Microsoft Word, Excel, PowerPoint, Visio, dan IBM SPSS.",
+            "clinic-task-1": "Memeriksa kelengkapan dokumen rawat jalan sebelum mengonfirmasi status “Berkas OK” di aplikasi rumah sakit, memberikan bantuan awal untuk aplikasi terkait BPJS, dan membantu staf beradaptasi dengan perubahan alur kerja.",
+            "role-freelance": "Dukungan Proyek Independen di Bidang TI, Analisis Sistem & Teknis",
+            "company-freelance": "Freelance · Proyek paruh waktu yang berjalan bersamaan",
+            "date-freelance": "2019–Sekarang",
+            "freelance-task-1": "Menggali dan menganalisis kebutuhan klien serta meninjau alur kerja, lalu menerjemahkan kebutuhan menjadi hasil teknis yang praktis tanpa mengklaim tanggung jawab pengembangan penuh di setiap proyek.",
+            "freelance-task-2": "Menyiapkan dokumentasi sistem, diagram use case/activity/sequence, wireframe antarmuka (LKT), laporan teknis, dan materi presentasi; menggunakan pendekatan berorientasi Waterfall jika sesuai.",
+            "freelance-task-3": "Mendukung proyek aplikasi web dan program sederhana melalui peninjauan fungsional, troubleshooting, validasi data, serta pengujian black-box atau white-box bila sesuai.",
+            "freelance-task-4": "Mengoordinasikan masukan dan permintaan perubahan dari klien melalui kanal digital serta menindaklanjuti kebutuhan proyek.",
+            "projects-heading": "Proyek Teknis Pilihan",
+            "project-pharmacy-title": "Ekstraksi & Pelaporan Data Farmasi",
+            "project-pharmacy-meta": "Alur kerja berbasis proyek · 2026",
+            "project-pharmacy": "Membuat alur kerja ekstraksi, transformasi, dan pelaporan data menggunakan Python, Pandas, pymssql, SQL Server, dan OpenPyXL. Alur ini mendeteksi dan memetakan kolom spreadsheet, menormalkan nomor registrasi, menggabungkan data duplikat, memadukan data Excel dengan hasil kueri SQL, menghitung lama rawat dan jumlah obat, serta menghasilkan laporan Excel terformat dengan catatan pengecualian.",
+            "project-lab-title": "Lab Pengembangan Pribadi SQL Server 2019",
+            "project-lab-meta": "Lab pengembangan pribadi",
+            "project-lab": "Mengonfigurasi lingkungan lokal SQL Server 2019 di Docker pada macOS, menghubungkan klien database termasuk DBeaver dan TablePlus, serta berlatih memeriksa backup, memulihkan database, dan mengelola lingkungan pengembangan. Ini merupakan pengalaman lab pribadi, bukan administrasi produksi rumah sakit.",
+            "project-cpns-title": "Sistem Presensi CPNS/PPPK",
+            "project-cpns": "Berkontribusi dalam analisis sistem dan penggalian kebutuhan untuk aplikasi presensi, termasuk dokumentasi alur kerja dan peninjauan kebutuhan aplikasi.",
+            "view-project": "Lihat proyek",
+            "project-genkai-title": "Katalog Digital Genkai Cloth",
+            "project-genkai": "Merancang, mengembangkan, dan mengelola profil brand serta katalog digital berbasis WordPress dengan tampilan minimalis yang berfokus pada produk.",
+            "project-enrollment-title": "Sistem Pendaftaran Santri",
+            "project-enrollment": "Memetakan kebutuhan sistem dan alur administrasi untuk proses pendaftaran santri digital di sebuah pondok pesantren.",
+            "project-cafe-title": "POS Kafe & Integrasi QRIS",
+            "project-cafe": "Menganalisis kebutuhan bisnis dan mendokumentasikan kebutuhan fungsional untuk alur sistem kasir kafe, termasuk menu berbasis QR dan pembayaran digital.",
+            "project-statistics-title": "Analisis Data Statistik",
+            "project-statistics": "Mengolah, memvalidasi, dan menganalisis data penelitian akademik kuantitatif menggunakan IBM SPSS untuk mendukung penyusunan skripsi.",
+            "leadership-heading": "Kepemimpinan & Pengalaman Organisasi",
+            "fun-basket-role": "Anggota Panitia, Pembawa Acara & Dukungan Sponsorship",
+            "fun-basket-1": "Mendukung kegiatan organisasi dan pelaksanaan acara sebagai anggota panitia umum tanpa jabatan divisi formal.",
+            "fun-basket-2": "Secara rutin menjadi Master of Ceremonies (MC) dalam acara klub dan mendukung sponsorship melalui kontribusi merchandise Genkai Clothing untuk hadiah mini-game.",
+            "fun-basket-3": "Membantu mengidentifikasi dan menghubungkan calon sponsor eksternal.",
+            "color-run-role": "Ketua Umum & Penanggung Jawab Acara",
+            "color-run-1": "Menjabat sebagai Ketua Umum sekaligus penanggung jawab Indonesia Color Run Pekalongan 2019, yang diselenggarakan di bawah organisasi nasional yang memilih Pekalongan sebagai salah satu lokasi acara.",
+            "color-run-2": "Memimpin perencanaan dan pelaksanaan, mengoordinasikan panitia, membagi tanggung jawab, memantau progres persiapan, serta mengawasi kolaborasi antar divisi dan operasional acara.",
+            "hikari-role": "Ketua Klub",
+            "hikari-1": "Memimpin komunitas budaya Jepang saat bersekolah di SMK, mengelola anggota dan kegiatan, menyelenggarakan acara internal, serta mengoordinasikan proyek yang dipresentasikan di sekolah dan acara eksternal.",
+            "hikari-2": "Membagi tanggung jawab dan mengoordinasikan anggota untuk mendukung keberhasilan pelaksanaan proyek.",
+            "entrepreneur-heading": "Pengalaman Wirausaha",
+            "lingkar-role": "Pendiri & Pemilik, Wedding Organizer",
+            "lingkar-1": "Mendirikan dan mengelola usaha secara mandiri serta mengoordinasikan sekitar lima proyek klien.",
+            "lingkar-2": "Mengelola anggaran dan komunikasi klien; mencari dan bernegosiasi dengan vendor, merekrut dan mengoordinasikan tim freelance, serta mengawasi jadwal, persiapan, dan pelaksanaan di lokasi.",
+            "early-heading": "Pengalaman Teknis Awal & Prestasi",
+            "lks-role": "Lomba Kompetensi Siswa (LKS) TKJ — Juara 2",
+            "lks-context": "Tingkat kabupaten · Juara 2 dari 26 perwakilan sekolah",
+            "lks-1": "Terpilih mewakili SMK dalam kompetisi Teknik Komputer dan Jaringan tingkat kabupaten.",
+            "lks-2": "Mengerjakan tantangan praktik administrasi web server dan jaringan MikroTik, termasuk pemfilteran akses situs dan konfigurasi aturan pengecualian.",
+            "lks-3": "Meraih juara kedua dari 26 perwakilan sekolah, dengan satu siswa mewakili setiap sekolah.",
+            "intern-role": "Peserta Magang Laboratorium Komputer",
+            "intern-date": "2016 · Magang enam bulan",
+            "intern-1": "Mengelola dan merawat dua laboratorium komputer, mendukung operasional dan kegiatan teknis harian, serta sesekali membimbing siswa junior dalam mata pelajaran dan praktik komputer.",
+            "mikrotik-role": "Peserta Pelatihan Teknis MikroTik",
+            "mikrotik-date": "SMK · Pelatihan dua hari",
+            "mikrotik-1": "Menyelesaikan latihan jaringan langsung menggunakan perangkat MikroTik yang disediakan penyelenggara pelatihan eksternal. Sertifikat pelatihan pernah diterima, tetapi dokumennya saat ini tidak tersedia. Tidak ada klaim sertifikasi resmi MikroTik.",
             "education-heading": "Pendidikan",
             "degree": "Sarjana Teknik Informatika (S.Kom.)",
-            "education-focus": "Fokus: Pengembangan Mobile & Web • IPK: 3,03 / 4,00",
-            "training-heading": "Pelatihan & Sertifikasi",
-            "training-1": "<strong>Microsoft Official Course: MOC 20740 — Installation, Storage, and Compute with Windows Server 2016:</strong> Mengikuti pelatihan instalasi, penyimpanan, dan komputasi pada Windows Server. — Inixindo Jogja, Februari 2023",
-            "training-2": "<strong>Bootcamp PK FEST 2022 — Python Practice for AI Coding:</strong> Belajar dan praktik dasar pemrograman Python untuk mendukung pengembangan solusi berbasis AI. — STMIK Widya Pratama Pekalongan, Januari 2022",
-            "training-3": "<strong>Pelatihan Teknis Keterbukaan Informasi Publik dan Kerahasiaan Data Publik:</strong> Mempelajari standar layanan PPID rumah sakit, keamanan siber dan perlindungan informasi sistem rumah sakit, serta perlindungan data pribadi. — ARSADA Jawa Tengah, 18 September 2026 (3 jam pelajaran)",
-            "training-4": "<strong>Webinar Nasional — Leveling Up Your Data Science and Machine Learning Knowledge Under 90 Minutes:</strong> Menambah wawasan tentang Data Science dan Machine Learning, termasuk penerapannya untuk mengolah data dan mendukung pengambilan keputusan. — Dilatih.co, Maret 2022",
-            "training-5": "<strong>Webinar PK FEST 2022 — Bright Future of Data Science:</strong> Mengenal perkembangan Data Science dan perannya dalam analisis informasi serta pengambilan keputusan. — STMIK Widya Pratama, Januari 2022",
-            "training-6": "<strong>Webinar Data Analyst:</strong> Mengenal bidang analisis data dan bagaimana data dapat mendukung pengambilan keputusan. — GenBI Komisariat Universitas Diponegoro, Januari 2021",
-            "training-7": "<strong>Inspiring Professional Series 26 — Visualisasi Survei Menggunakan Google Data Studio:</strong> Mempelajari cara menyajikan data survei agar lebih terstruktur dan mudah dipahami. — Perkumpulan Teachpreneur Indonesia Cerdas (PTIC), Maret 2022",
-            "systems-heading": "Sistem & Proyek Pilihan",
-            "system-1": "<strong>Penyempurnaan Alur Pendaftaran Rawat Jalan dan AutoSEP:</strong> Menggali dan mendokumentasikan kebutuhan, berkoordinasi dengan tim terkait, serta menguji pembaruan menu “Buat SEP”.",
-            "system-2": "<strong>Pengolahan dan Pelaporan Data Operasional Farmasi:</strong> Membuat alur kerja Python dengan Pandas, pymssql, kueri SQL Server, dan OpenPyXL untuk menggabungkan data pasien dari Excel dengan data resep rawat inap dan berat badan pasien. Data tersebut digunakan untuk menghitung lama rawat dan jumlah obat, lalu disusun menjadi laporan Excel beserta catatan pengecualian.",
-            "system-3": "<strong>Infrastruktur Produksi & Database:</strong> Memantau VMware, mengelola jadwal backup SQL Server Agent, serta menangani pemulihan, pemeliharaan database, dan kendala operasional."
+            "graduation-date": "Lulus 2024",
+            "training-heading": "Pengembangan Profesional",
+            "training-1-title": "MOC 20740: Installation, Storage, and Compute with Windows Server 2016",
+            "training-1-meta": "Inixindo Jogja · Februari 2023",
+            "training-2-title": "PK FEST 2022 — Python Practice for AI Coding",
+            "training-2-meta": "STMIK Widya Pratama Pekalongan · Januari 2022",
+            "training-3-title": "Pelatihan Teknis Keterbukaan Informasi Publik dan Kerahasiaan Data Publik",
+            "training-3-meta": "ARSADA Jawa Tengah · 18 September 2026",
+            "webinars-heading": "Pembelajaran Tambahan & Webinar",
+            "webinar-5-title": "The BI Blueprint: Transforming Raw Data into Actionable Strategy",
+            "webinar-5-meta": "Inixindo Jogja · Yogyakarta · 12 November 2026 · 2 jam pelajaran",
+            "webinar-1-title": "Leveling Up Your Data Science and Machine Learning Knowledge Under 90 Minutes",
+            "webinar-1-meta": "Dilatih.co · Maret 2022",
+            "webinar-2-title": "Bright Future of Data Science — PK FEST 2022",
+            "webinar-2-meta": "STMIK Widya Pratama · Januari 2022",
+            "webinar-3-title": "Webinar Data Analyst",
+            "webinar-3-meta": "GenBI Komisariat Universitas Diponegoro · Januari 2021",
+            "webinar-4-title": "Survey Visualization Using Google Data Studio — Inspiring Professional Series 26",
+            "webinar-4-meta": "Perkumpulan Teachpreneur Indonesia Cerdas (PTIC) · Maret 2022",
+            "skills-heading": "Keahlian Teknis & Tools",
+            "skill-infrastructure-title": "Infrastruktur & Virtualisasi",
+            "skill-infrastructure": "VMware ESXi/vCenter, Windows Server, server fisik Supermicro, Oracle VM VirtualBox, Ubuntu, Debian, Synology NAS, Docker (lab pribadi), penyediaan virtual machine dan snapshot.",
+            "skill-database-title": "Database & Tools Database",
+            "skill-database": "Microsoft SQL Server 2008 R2, MariaDB, SQL, SQL Server Management Studio, SQL Server Agent, DBeaver, TablePlus, HeidiSQL, Adminer. SQL Server 2019 digunakan di lab pengembangan pribadi.",
+            "skill-monitoring-title": "Backup, Pemantauan & Konektivitas",
+            "skill-monitoring": "Backup dan pemulihan database, rutinitas backup transaction log dan pembersihannya, SQL Server Activity Monitor, PowerShell, Linux CLI, SSH, RDP, Cloudflare DNS, dukungan pemasangan SSL/TLS.",
+            "skill-data-title": "Pengolahan Data & Pengembangan",
+            "skill-data": "Python, Pandas, pymssql, OpenPyXL, dukungan aplikasi PHP/Laravel, XAMPP, Laragon, WordPress.",
+            "skill-analysis-title": "Analisis Sistem & Kualitas",
+            "skill-analysis": "Analisis kebutuhan dan alur kerja, diagram use case/activity/sequence, wireframe antarmuka (LKT), dokumentasi proses, pengujian fungsional, pengujian black-box dan white-box, validasi data.",
+            "skill-productivity-title": "Produktivitas & Analitik",
+            "skill-productivity": "Microsoft Word, Excel, PowerPoint, Visio, IBM SPSS.",
+            "skill-ai-title": "Tools AI & Produktivitas",
+            "skill-ai": "ChatGPT untuk konsultasi teknis dan dokumentasi; Claude untuk bantuan pemrograman, skrip Python, dan tinjauan kode; Perplexity AI untuk riset; GitHub Copilot untuk membantu penulisan kode di Visual Studio Code; serta Google Gemini untuk OCR dan pengolahan informasi."
         };
 
-        const welcomeScreen = document.getElementById("language-welcome");
-        const languageTargets = document.querySelectorAll("[data-i18n]");
-        const originalEnglish = new Map(
-            Array.from(languageTargets, (element) => [element, element.innerHTML])
+        const i18nElements = Array.from(document.querySelectorAll("[data-i18n]"));
+        const englishContent = new Map(
+            i18nElements.map((element) => [element, element.innerHTML])
         );
+        const languageButtons = document.querySelectorAll("[data-language]");
+        const englishDescription = document.querySelector('meta[name="description"]').content;
 
         function setLanguage(language) {
-            const isIndonesian = language === "id";
-            document.documentElement.lang = language;
+            if (language !== "en" && language !== "id") {
+                throw new RangeError(`Unsupported language: ${language}`);
+            }
 
-            languageTargets.forEach((element) => {
-                const key = element.dataset.i18n;
-                const content = isIndonesian ? indonesianTranslations[key] : originalEnglish.get(element);
+            i18nElements.forEach((element) => {
+                const content = language === "id"
+                    ? indonesianTranslations[element.dataset.i18n]
+                    : englishContent.get(element);
                 if (content === undefined) {
-                    throw new Error(`Missing ${language} translation for "${key}".`);
+                    throw new Error(`Missing ${language} translation for "${element.dataset.i18n}".`);
                 }
                 element.innerHTML = content;
             });
 
-            document.querySelector('meta[name="description"]').content = isIndonesian
-                ? "Profesional infrastruktur TI dan operasional database dengan pengalaman lebih dari 4 tahun di rumah sakit umum."
-                : "IT Infrastructure & Database Operations professional with 4+ years of hands-on experience at a public hospital. VMware, Windows Server, Linux, SQL Server, system analysis.";
-            welcomeScreen.hidden = true;
-            document.body.style.overflow = "";
-            document.querySelector(".sidebar").inert = false;
-            document.querySelector(".main-content").inert = false;
+            document.documentElement.lang = language;
+            document.querySelector('meta[name="description"]').content = language === "id"
+                ? "Profesional operasional TI dengan pengalaman lebih dari 4 tahun dalam infrastruktur dan operasional database serta dukungan aplikasi rumah sakit sejak 2017."
+                : englishDescription;
+            languageButtons.forEach((button) => {
+                button.setAttribute("aria-pressed", String(button.dataset.language === language));
+            });
         }
 
-        function showLanguageWelcome() {
-            welcomeScreen.hidden = false;
-            document.body.style.overflow = "hidden";
-            document.querySelector(".sidebar").inert = true;
-            document.querySelector(".main-content").inert = true;
-            welcomeScreen.querySelector("[data-language-choice]").focus();
-        }
-
-        document.querySelectorAll("[data-language-choice]").forEach((button) => {
-            button.addEventListener("click", () => setLanguage(button.dataset.languageChoice));
+        languageButtons.forEach((button) => {
+            button.addEventListener("click", () => setLanguage(button.dataset.language));
         });
 
-        document.getElementById("change-language").addEventListener("click", showLanguageWelcome);
-
-        welcomeScreen.hidden = false;
-        document.body.style.overflow = "hidden";
-        document.querySelector(".sidebar").inert = true;
-        document.querySelector(".main-content").inert = true;
-        welcomeScreen.querySelector("[data-language-choice]").focus();
+        setLanguage("id");
     </script>
-
 </body>
 </html>
